@@ -34,11 +34,10 @@ export default function Navbar() {
         initial={{ opacity: 0, y: -24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          isScrolled || isMenuOpen
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${isScrolled || isMenuOpen
             ? 'border-b border-white/10 bg-ink-950/80 py-3 shadow-[0_10px_40px_-20px_rgb(0_0_0/0.8)] backdrop-blur-xl'
             : 'border-b border-transparent bg-transparent py-5'
-        }`}
+          }`}
       >
         <div className="section-shell flex items-center justify-between">
           <a
@@ -51,7 +50,7 @@ export default function Navbar() {
             aria-label="Back to top"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary-400/40 bg-primary-500/10 text-primary-300 transition duration-500 group-hover:rotate-6 group-hover:border-primary-300">
-              <Braces className="h-5 w-5" aria-hidden="true" />
+              <span className="text-sm font-bold tracking-tight">H</span>
             </span>
             <span className="font-display text-lg font-bold tracking-[0.18em] text-white">HASHIM</span>
           </a>
@@ -66,9 +65,8 @@ export default function Navbar() {
                       href={item.href}
                       onClick={(event) => handleLinkClick(event, item.href)}
                       aria-current={isActive ? 'true' : undefined}
-                      className={`relative block rounded-full px-4 py-2 text-sm transition duration-300 ${
-                        isActive ? 'text-white' : 'text-ink-300 hover:text-white'
-                      }`}
+                      className={`relative block rounded-full px-4 py-2 text-sm transition duration-300 ${isActive ? 'text-white' : 'text-ink-300 hover:text-white'
+                        }`}
                     >
                       {isActive && (
                         <motion.span

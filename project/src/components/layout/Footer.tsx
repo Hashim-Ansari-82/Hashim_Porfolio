@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr] md:items-start">
           <div className="space-y-5">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary-400/40 bg-primary-500/10 text-primary-300">
-                <Braces className="h-5 w-5" aria-hidden="true" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary-400/40 bg-primary-500/10 text-primary-300 transition duration-500 group-hover:rotate-6 group-hover:border-primary-300">
+                <span className="text-sm font-bold tracking-tight">M H</span>
               </span>
               <p className="font-display text-lg font-bold tracking-[0.18em] text-white">MOHAMMAD HASHIM</p>
             </div>
@@ -29,19 +29,19 @@ export default function Footer() {
             <p className="eyebrow mb-5 text-ink-400">Navigate</p>
             <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
               {footerNavigation.map((item) => (
-                  <li key={item.href}>
-                    <a
-                      href={item.href}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        scrollTo(item.href);
-                      }}
-                      className="text-ink-300 transition duration-300 hover:text-white"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      scrollTo(item.href);
+                    }}
+                    className="text-ink-300 transition duration-300 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 

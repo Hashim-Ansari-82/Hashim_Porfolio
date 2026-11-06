@@ -4,10 +4,10 @@ export const profile = {
   lastName: 'Hashim',
   title: 'Java Full Stack Developer',
   location: 'Mumbai, Maharashtra, India',
- photo: '/profile-transparent.png',
+  photo: '/profile-transparent.png',
   resumePath: '/Hashim_Resume.pdf',
   resumeFileName: 'Mohammad_Hashim_Resume.pdf',
-  email: 'mohammadhashim7922@gmail.com',
+  email: 'mohammadhashim7233@gmail.com',
   phone: '+91 7233867025',
   phoneHref: 'tel:+917233867025',
   github: 'https://github.com/Hashim-Ansari-82',
@@ -214,5 +214,10 @@ export const contactContent = {
 export const socialLinks = [
   { id: 'github', label: 'GitHub', href: profile.github, icon: 'Github' },
   { id: 'linkedin', label: 'LinkedIn', href: profile.linkedin, icon: 'Linkedin' },
-  { id: 'email', label: 'Email', href: `mailto:${profile.email}`, icon: 'Mail' },
+  {
+  id: 'email',
+  label: 'Email',
+  href: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`,
+  icon: 'Mail',
+},
 ] as const;
